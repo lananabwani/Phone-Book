@@ -6,19 +6,24 @@
   
   body {
     background-image: url(./imgs/background.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
   }
   
   header {
     min-height: 10dvh;
     text-align: center;
-    padding: 1rem
+    padding: 1rem;
   }
-  
+
   footer {
     margin-top: 1rem;
     min-height: 10dvh;
-    text-align: center;
     font-size: 1.5rem;
+    display:flex;
+    justify-content: center;
   }
 
   .container {
@@ -30,7 +35,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(226, 238, 237);
 
   }
 
