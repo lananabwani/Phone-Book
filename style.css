@@ -4,12 +4,16 @@
     box-sizing: border-box;
   }
   
+  html,body{
+    height:100%;
+  }
   body {
     background-image: url(./imgs/background.jpg);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+  }
+  main{
+    flex-grow: 1;
   }
   
   header {
