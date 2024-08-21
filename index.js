@@ -79,8 +79,8 @@ function closeModal() {
 
 function showContact(contactId) {
     openModal();
-
     const div = document.getElementById("modal-content");
+    div.innerHTML = "";
     const user = users.find((user) => user.id === contactId);
     div.innerHTML = `
     <div class="flex-popup">
@@ -97,6 +97,7 @@ function showContact(contactId) {
 function editContact(contactId) {
     openModal();
     const div = document.getElementById("modal-content");
+    div.innerHTML = "";
     const user = users.find((user) => user.id === contactId);
 
     div.innerHTML = `
@@ -144,17 +145,18 @@ function saveContact(phoneNumber) {
         <h4>${user.name}</h4>
     </div>
     <div class="flex">
-        <button class="icon" onclick="showContact('${user.phone}')">
+        <button class="icon" onclick="showContact('${user.id}')">
             <img src="./imgs/info.png" />
         </button>
-        <button class="icon" onclick="editContact('${user.phone}')">
+        <button class="icon" onclick="editContact('${user.id}')">
             <img src="./imgs/edit.png" />
         </button>
-        <button class="icon" onclick="deleteContact('${user.phone}')">
+        <button class="icon" onclick="deleteContact('${user.id}')">
             <img src="./imgs/delete.png"/>
         </button>
     </div>
     `;
+    closeModal();
 }
 
 function deleteContacts() {
