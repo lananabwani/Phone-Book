@@ -69,6 +69,7 @@ function getUser(user) {
     <div class="flex">
         <img class="profile" src="./imgs/${user.img}.jpg" alt="user pfp placeholder" />
         <h4>${user.name}</h4>
+        <h5>${user.phone}</h5>
     </div>
     <div class="flex">
         <button class="icon" onclick="showContact('${user.id}')">
