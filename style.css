@@ -16,6 +16,16 @@ body {
   flex-direction: column;
 }
 
+.dark-mode{
+  background-image: none;
+  background-color: #363232;
+  color: white;
+ }
+
+.dark-mode div {
+  background-color: #747171;
+}
+
 main {
   flex-grow: 1;
 }
@@ -161,6 +171,14 @@ footer {
   padding: 15px;
   text-align: left;
 }
+.edit-form div{
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-form textarea {
+  width: 100%;
+}
 
 .edit-form input {
   width: 100%;
@@ -168,4 +186,21 @@ footer {
 .edit-form label {
   font-size: x-large;
   font-weight: bolder;
+}
+/* הופעת איפקט נוסף לדף */
+@keyframes backgroundColorChange {
+  0% {
+    background-color: #ff6347; 
+  }
+  50% {
+    background-color: #4682b4; 
+  }
+  100% {
+    background-color: #32cd32;
+  }
+}
+/* הפעלת האיפקט */
+.animated-background {
+  background-image: none;
+  animation: backgroundColorChange 5s infinite;
 }
