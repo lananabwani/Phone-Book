@@ -204,3 +204,7 @@ footer {
   background-image: none;
   animation: backgroundColorChange 5s infinite;
 }
+/* בלחיצה על רשומה כלשהיא יופיע צבע ברקע */
+li:hover {
+  background-color: rgb(183, 183, 183);
+}
