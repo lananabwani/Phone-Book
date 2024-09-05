@@ -222,7 +222,7 @@ function saveContact(phoneNumber) {
 function deleteContacts() {
   if (confirm("Are you sure you want to delete all contacts?")) {
     users = [];
-    document.getElementById("phone-list").innerHTML = "";
+    document.getElementById('phone-list').innerHTML = "No Contacts"
     document.getElementById("users-length").innerHTML = `${users.length} People`
   }
 }
@@ -310,6 +310,10 @@ function deleteContact(contactId) {
     document.getElementsByClassName(contactId)[0].remove(); // הסר את אלמנט ה-HTML של איש הקשר
     document.getElementById("users-length").innerHTML = `${users.length} People`
   }
+  if(users.length === 0)
+    {
+      document.getElementById('phone-list').innerHTML = "No Contacts"
+    }
 }
 
 // פונקציה להפעלת ה darkmode
@@ -348,3 +352,13 @@ function checkIfNumberExists(number){
       return true;
   return false;
 }
+
+document.querySelectorAll("li").forEach(function (li) {
+  li.addEventListener("mouseover", function () {
+    this.classList.add("hovered");
+  });
+
+  li.addEventListener("mouseout", function () {
+    this.classList.remove("hovered");
+  });
+});
