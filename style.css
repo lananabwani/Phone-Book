@@ -205,6 +205,16 @@ footer {
   animation: backgroundColorChange 5s infinite;
 }
 /* בלחיצה על רשומה כלשהיא יופיע צבע ברקע */
-li:hover {
+.hovered {
   background-color: rgb(183, 183, 183);
+}
+
+
+@media only screen and (max-width: 600px) {
+  h4 {
+    font-size: small !important;
+  }
+  h5 {
+    font-size: smaller;
+  }
 }
